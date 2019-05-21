@@ -24,9 +24,9 @@ public class Main extends Application {
 		stage.setScene(scene);
 
 		// creating the label component
-		Label lblMain = new Label(Strings.lblMain + " " + username);
-		lblMain.setLayoutX(10);
-		lblMain.setLayoutY(10);
+		Label lblMain = new Label(Strings.lblMain + " " + username + "!");
+		lblMain.setLayoutX(20);
+		lblMain.setLayoutY(20);
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblMain);

@@ -1,9 +1,12 @@
 package br.edu.ifsc.ui;
 
+import javax.swing.text.PasswordView;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -33,7 +36,7 @@ public class Login extends Application {
 		lblLogin = new Label(Strings.lblLogin);
 		lblLogin.setLayoutX(10);
 		lblLogin.setLayoutY(10);
-		
+
 		lblPassword = new Label(Strings.lblPassword);
 		lblPassword.setLayoutX(10);
 		lblPassword.setLayoutY(70);
@@ -49,7 +52,7 @@ public class Login extends Application {
 
 		// creating the password textfield
 
-		txtPassword = new TextField();
+		PasswordField txtPassword = new PasswordField();
 		txtPassword.setLayoutX(10);
 		txtPassword.setLayoutY(91);
 		txtPassword.setMaxWidth(150);
@@ -60,8 +63,9 @@ public class Login extends Application {
 		btnLogin = new Button(Strings.btnLogin);
 		btnLogin.setLayoutX(167);
 		btnLogin.setLayoutY(30);
-		btnLogin.setOnMouseClicked(e -> login(stage, (String) txtPassword.getText())); // setting the button behavior using a
-																					// lambda expression
+		btnLogin.setOnMouseClicked(e -> login(stage, txtUsername.getText().trim(), txtPassword.getText().trim())); // setting the button behavior
+																						// using a
+																						// lambda expression
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblLogin);
@@ -81,11 +85,10 @@ public class Login extends Application {
 		stage.show();
 	}
 
-	private void login(Stage stage, String password) {
+	private void login(Stage stage, String username, String password) {
 
-		password = "admin";
-		
-		if (!txtUsername.getText().equals("admin")) {
+
+		if (!username.equals("admin")) {
 			try {
 				new Error(Strings.loginError).start(new Stage());
 			} catch (Exception e) {
@@ -94,7 +97,7 @@ public class Login extends Application {
 			return;
 		}
 
-		if (!txtPassword.getText().equals("admin")) {
+		if (!password.equals("admin")) {
 			try {
 				new Error(Strings.passwordError).start(new Stage());
 			} catch (Exception e) {
@@ -104,7 +107,7 @@ public class Login extends Application {
 		}
 
 		try {
-			new Main(txtUsername.getText()).start(new Stage());
+			new Main(this.txtUsername.getText()).start(new Stage());
 			stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
