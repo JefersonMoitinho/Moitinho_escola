@@ -36,6 +36,7 @@ public class Login extends Application {
 		lblLogin.setLayoutY(10);
 
 		// creating the username textfield
+		
 		txtUsername = new TextField();
 		txtUsername.setLayoutX(10);
 		txtUsername.setLayoutY(31);
