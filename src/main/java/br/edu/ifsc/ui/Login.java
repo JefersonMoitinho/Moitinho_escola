@@ -1,7 +1,5 @@
 package br.edu.ifsc.ui;
 
-import org.controlsfx.control.Rating;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,8 +12,9 @@ import jfxtras.styles.jmetro8.JMetro;
 public class Login extends Application {
 	private Button btnLogin;
 	private TextField txtUsername;
-	private Rating rating;
+	private TextField txtPassword;
 	private Label lblLogin;
+	private Label lblPassword;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -34,9 +33,13 @@ public class Login extends Application {
 		lblLogin = new Label(Strings.lblLogin);
 		lblLogin.setLayoutX(10);
 		lblLogin.setLayoutY(10);
+		
+		lblPassword = new Label(Strings.lblPassword);
+		lblPassword.setLayoutX(10);
+		lblPassword.setLayoutY(70);
 
 		// creating the username textfield
-		
+
 		txtUsername = new TextField();
 		txtUsername.setLayoutX(10);
 		txtUsername.setLayoutY(31);
@@ -44,27 +47,28 @@ public class Login extends Application {
 		txtUsername.setMinWidth(150);
 		txtUsername.setPrefWidth(150);
 
+		// creating the password textfield
+
+		txtPassword = new TextField();
+		txtPassword.setLayoutX(10);
+		txtPassword.setLayoutY(91);
+		txtPassword.setMaxWidth(150);
+		txtPassword.setMinWidth(150);
+		txtPassword.setPrefWidth(150);
+
 		// creating the login button
 		btnLogin = new Button(Strings.btnLogin);
 		btnLogin.setLayoutX(167);
 		btnLogin.setLayoutY(30);
-		btnLogin.setOnMouseClicked(e -> login(stage, (int) rating.getRating())); // setting the button behavior using a
+		btnLogin.setOnMouseClicked(e -> login(stage, (String) txtPassword.getText())); // setting the button behavior using a
 																					// lambda expression
-
-		// creating the rating component, a controlsfx library control
-		rating = new Rating();
-		rating.setUpdateOnHover(true);
-		rating.setLayoutX(10);
-		rating.setLayoutY(70);
-		rating.setPrefWidth(10);
-		rating.setRating(0);
-		rating.setMax(7);
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblLogin);
+		pane.getChildren().add(lblPassword);
 		pane.getChildren().add(btnLogin);
 		pane.getChildren().add(txtUsername);
-		pane.getChildren().add(rating);
+		pane.getChildren().add(txtPassword);
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
@@ -77,9 +81,11 @@ public class Login extends Application {
 		stage.show();
 	}
 
-	private void login(Stage stage, int password) {
+	private void login(Stage stage, String password) {
 
-		if (txtUsername.getText().isEmpty()) {
+		password = "admin";
+		
+		if (!txtUsername.getText().equals("admin")) {
 			try {
 				new Error(Strings.loginError).start(new Stage());
 			} catch (Exception e) {
@@ -88,7 +94,7 @@ public class Login extends Application {
 			return;
 		}
 
-		if (password != 3) {
+		if (!txtPassword.getText().equals("admin")) {
 			try {
 				new Error(Strings.passwordError).start(new Stage());
 			} catch (Exception e) {

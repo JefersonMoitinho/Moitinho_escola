@@ -29,7 +29,7 @@ public class Error extends Application {
 		lblMessage.setLayoutX(10);
 		lblMessage.setLayoutY(10);
 
-		// creating the login button
+		// creating the Ok button
 		Button btnOk = new Button(Strings.btnOk);
 		btnOk.setLayoutX(167);
 		btnOk.setLayoutY(10);
