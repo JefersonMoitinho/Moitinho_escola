@@ -1,7 +1,5 @@
 package br.edu.ifsc.ui;
 
-import javax.swing.text.PasswordView;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -15,7 +13,7 @@ import jfxtras.styles.jmetro8.JMetro;
 public class Login extends Application {
 	private Button btnLogin;
 	private TextField txtUsername;
-	private TextField txtPassword;
+	private PasswordField txtPassword;
 	private Label lblLogin;
 	private Label lblPassword;
 
@@ -42,7 +40,6 @@ public class Login extends Application {
 		lblPassword.setLayoutY(70);
 
 		// creating the username textfield
-
 		txtUsername = new TextField();
 		txtUsername.setLayoutX(10);
 		txtUsername.setLayoutY(31);
@@ -51,8 +48,7 @@ public class Login extends Application {
 		txtUsername.setPrefWidth(150);
 
 		// creating the password textfield
-
-		PasswordField txtPassword = new PasswordField();
+		txtPassword = new PasswordField();
 		txtPassword.setLayoutX(10);
 		txtPassword.setLayoutY(91);
 		txtPassword.setMaxWidth(150);

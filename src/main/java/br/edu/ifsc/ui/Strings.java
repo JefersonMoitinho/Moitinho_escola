@@ -10,4 +10,9 @@ public class Strings {
 	public static final String btnOk = "Ok";
 	public static final String loginError = "ERRO: Digite seu nome!";
 	public static final String passwordError = "Senha errada";
+	public static final String btnMenuSair = "SAIR";
+	public static final String btnMenuAluno = " Gerenciar Aluno";
+	public static final String btnMenuProfessor = "Gerenciar Professor";
+	public static final String btnMenuRotinaClasse = "Rotina Classe";
+	public static final String btnMenuBiblioteca = "Biblioteca";
 }
