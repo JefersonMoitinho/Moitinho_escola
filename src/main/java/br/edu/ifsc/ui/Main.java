@@ -16,6 +16,7 @@ public class Main extends Application {
 	private Button btnMenuProfessor;
 	private Button btnMenuRotinaClasse;
 	private Button btnMenuBiblioteca;
+	private Button btnMenuDefinicoes;
 
 	public Main(String username) {
 		this.username = username;
@@ -36,44 +37,52 @@ public class Main extends Application {
 
 		// creating the exit menu button
 		btnMenuSair = new Button(Strings.btnMenuSair);
-		btnMenuSair.setLayoutX(370);
+		btnMenuSair.setLayoutX(360);
 		btnMenuSair.setLayoutY(30);
-		btnMenuSair.setMaxWidth(90);
+		btnMenuSair.setMaxWidth(80);
 		btnMenuSair.setMinWidth(15);
 		btnMenuSair.setPrefWidth(150);
 		btnMenuSair.setOnMouseClicked(e -> close(stage));
 
 		// creating the student menu button
 		btnMenuAluno = new Button(Strings.btnMenuAluno);
-		btnMenuAluno.setLayoutX(30);
-		btnMenuAluno.setLayoutY(100);
+		btnMenuAluno.setLayoutX(40);
+		btnMenuAluno.setLayoutY(110);
 		btnMenuAluno.setMaxWidth(150);
 		btnMenuAluno.setMinWidth(190);
 		btnMenuAluno.setPrefWidth(150);
 
 		// creating the teacher menu button
 		btnMenuProfessor = new Button(Strings.btnMenuProfessor);
-		btnMenuProfessor.setLayoutX(240);
-		btnMenuProfessor.setLayoutY(100);
+		btnMenuProfessor.setLayoutX(250);
+		btnMenuProfessor.setLayoutY(110);
 		btnMenuProfessor.setMaxWidth(150);
 		btnMenuProfessor.setMinWidth(190);
 		btnMenuProfessor.setPrefWidth(150);
 
 		// creating the menu button class routine
 		btnMenuRotinaClasse = new Button(Strings.btnMenuRotinaClasse);
-		btnMenuRotinaClasse.setLayoutX(30);
-		btnMenuRotinaClasse.setLayoutY(155);
+		btnMenuRotinaClasse.setLayoutX(40);
+		btnMenuRotinaClasse.setLayoutY(165);
 		btnMenuRotinaClasse.setMaxWidth(150);
 		btnMenuRotinaClasse.setMinWidth(190);
 		btnMenuRotinaClasse.setPrefWidth(150);
 
 		// creating the library menu button
 		btnMenuBiblioteca = new Button(Strings.btnMenuBiblioteca);
-		btnMenuBiblioteca.setLayoutX(240);
-		btnMenuBiblioteca.setLayoutY(155);
+		btnMenuBiblioteca.setLayoutX(250);
+		btnMenuBiblioteca.setLayoutY(165);
 		btnMenuBiblioteca.setMaxWidth(150);
 		btnMenuBiblioteca.setMinWidth(190);
 		btnMenuBiblioteca.setPrefWidth(150);
+		
+		// creating the library menu button
+		btnMenuDefinicoes = new Button(Strings.btnMenuDefinicoes);
+		btnMenuDefinicoes.setLayoutX(155);
+		btnMenuDefinicoes.setLayoutY(230);
+		btnMenuDefinicoes.setMaxWidth(150);
+		btnMenuDefinicoes.setMinWidth(190);
+		btnMenuDefinicoes.setPrefWidth(150);
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblMain);
@@ -81,6 +90,7 @@ public class Main extends Application {
 		pane.getChildren().add(btnMenuProfessor);
 		pane.getChildren().add(btnMenuRotinaClasse);
 		pane.getChildren().add(btnMenuBiblioteca);
+		pane.getChildren().add(btnMenuDefinicoes);
 		pane.getChildren().add(btnMenuSair);
 
 		// applying the LIGHT style from the JMetro library to the pane

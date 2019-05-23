@@ -15,4 +15,5 @@ public class Strings {
 	public static final String btnMenuProfessor = "Gerenciar Professor";
 	public static final String btnMenuRotinaClasse = "Rotina Classe";
 	public static final String btnMenuBiblioteca = "Biblioteca";
+	public static final String btnMenuDefinicoes = "Definições";
 }
