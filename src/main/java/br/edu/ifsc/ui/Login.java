@@ -41,6 +41,7 @@ public class Login extends Application {
 
 		// creating the username textfield
 		txtUsername = new TextField();
+		txtUsername.setPromptText("Digite aqui seu login");
 		txtUsername.setLayoutX(10);
 		txtUsername.setLayoutY(31);
 		txtUsername.setMaxWidth(150);
@@ -49,6 +50,7 @@ public class Login extends Application {
 
 		// creating the password textfield
 		txtPassword = new PasswordField();
+		txtPassword.setPromptText("Digite aqui sua senha");
 		txtPassword.setLayoutX(10);
 		txtPassword.setLayoutY(91);
 		txtPassword.setMaxWidth(150);
@@ -57,7 +59,7 @@ public class Login extends Application {
 
 		// creating the login button
 		btnLogin = new Button(Strings.btnLogin);
-		btnLogin.setLayoutX(167);
+		btnLogin.setLayoutX(180);
 		btnLogin.setLayoutY(30);
 		btnLogin.setOnMouseClicked(e -> login(stage, txtUsername.getText().trim(), txtPassword.getText().trim())); // setting the button behavior
 																						// using a
@@ -72,6 +74,10 @@ public class Login extends Application {
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
+		
+		// melhorando aparencia do painel principal
+		pane.setStyle("-fx-background-color:	linear-gradient(\n" + 
+				"						from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);

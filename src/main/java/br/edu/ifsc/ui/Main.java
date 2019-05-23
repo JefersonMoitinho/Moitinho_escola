@@ -41,6 +41,7 @@ public class Main extends Application {
 		btnMenuSair.setMaxWidth(90);
 		btnMenuSair.setMinWidth(15);
 		btnMenuSair.setPrefWidth(150);
+		btnMenuSair.setOnMouseClicked(e -> close(stage));
 
 		// creating the student menu button
 		btnMenuAluno = new Button(Strings.btnMenuAluno);
@@ -84,6 +85,10 @@ public class Main extends Application {
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
+		
+		// melhorando aparencia do painel principal
+		pane.setStyle("-fx-background-color:	linear-gradient(\n" + 
+				"						from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);
@@ -91,6 +96,10 @@ public class Main extends Application {
 
 		// showing the created UI
 		stage.show();
+	}
+	
+	private void close(Stage stage) {
+		stage.close();
 	}
 
 }

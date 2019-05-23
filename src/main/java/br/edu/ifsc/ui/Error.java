@@ -42,6 +42,10 @@ public class Error extends Application {
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
 		
+		// melhorando aparencia do painel principal
+		pane.setStyle("-fx-background-color:	linear-gradient(\n" + 
+				"						from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+		
 		stage.show();
 	}
 
