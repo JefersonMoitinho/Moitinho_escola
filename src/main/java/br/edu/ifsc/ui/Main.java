@@ -75,8 +75,8 @@ public class Main extends Application {
 		btnMenuBiblioteca.setMaxWidth(150);
 		btnMenuBiblioteca.setMinWidth(190);
 		btnMenuBiblioteca.setPrefWidth(150);
-		
-		// creating the library menu button
+
+		// creating the menu button setting
 		btnMenuDefinicoes = new Button(Strings.btnMenuDefinicoes);
 		btnMenuDefinicoes.setLayoutX(155);
 		btnMenuDefinicoes.setLayoutY(230);
@@ -95,10 +95,10 @@ public class Main extends Application {
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
-		
+
 		// melhorando aparencia do painel principal
-		pane.setStyle("-fx-background-color:	linear-gradient(\n" + 
-				"						from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+		pane.setStyle("-fx-background-color:	linear-gradient(\n"
+				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);
@@ -107,7 +107,7 @@ public class Main extends Application {
 		// showing the created UI
 		stage.show();
 	}
-	
+
 	private void close(Stage stage) {
 		stage.close();
 	}

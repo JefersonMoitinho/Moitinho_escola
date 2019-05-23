@@ -61,9 +61,8 @@ public class Login extends Application {
 		btnLogin = new Button(Strings.btnLogin);
 		btnLogin.setLayoutX(180);
 		btnLogin.setLayoutY(30);
-		btnLogin.setOnMouseClicked(e -> login(stage, txtUsername.getText().trim(), txtPassword.getText().trim())); // setting the button behavior
-																						// using a
-																						// lambda expression
+		btnLogin.setOnMouseClicked(e -> login(stage, txtUsername.getText().trim(), txtPassword.getText().trim())); // setting
+																	         // the button behavior using a lambda expression
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblLogin);
@@ -74,10 +73,10 @@ public class Login extends Application {
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
-		
+
 		// melhorando aparencia do painel principal
-		pane.setStyle("-fx-background-color:	linear-gradient(\n" + 
-				"						from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+		pane.setStyle("-fx-background-color:	linear-gradient(\n"
+				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);
@@ -88,7 +87,6 @@ public class Login extends Application {
 	}
 
 	private void login(Stage stage, String username, String password) {
-
 
 		if (!username.equals("admin")) {
 			try {

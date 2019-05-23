@@ -2,6 +2,7 @@
 package br.edu.ifsc.ui;
 
 public class Strings {
+	
 	public static final String btnLogin = "Entrar";
 	public static final String lblLogin = "Digite seu login: ";
 	public static final String lblPassword = "Digite sua senha: ";
@@ -16,4 +17,5 @@ public class Strings {
 	public static final String btnMenuRotinaClasse = "Rotina Classe";
 	public static final String btnMenuBiblioteca = "Biblioteca";
 	public static final String btnMenuDefinicoes = "Definições";
+	public static final String lblMenuAluno = "Menu";
 }
