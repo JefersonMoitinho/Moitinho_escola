@@ -43,4 +43,10 @@ public class Strings {
 	public static final String lblCadTeacher = "Cadastrar  Professor";
 	public static final String btnTeacherAdd = "Adicionar";
 	public static final String btnTeacherCanc = "Cancelar";
+	
+	// String class CadTeacher
+	public static final String message2 = "Aluno cadastrado com sucesso";
+	public static final String btnOk2 = "Ok";
 }
+
+

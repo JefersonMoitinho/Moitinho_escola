@@ -32,6 +32,7 @@ public class CadStudent extends Application {
 		btnStudentAdd.setMaxWidth(80);
 		btnStudentAdd.setMinWidth(15);
 		btnStudentAdd.setPrefWidth(150);
+		btnStudentAdd.setOnMouseClicked(e -> {Add(stage);});
 		btnStudentAdd.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
 				
 		// creating the return button
@@ -41,7 +42,7 @@ public class CadStudent extends Application {
 		btnStudentCanc.setMaxWidth(80);
 		btnStudentCanc.setMinWidth(15);
 		btnStudentCanc.setPrefWidth(150);
-		btnStudentCanc.setOnMouseClicked(e -> {CadStudent(stage);});
+		btnStudentCanc.setOnMouseClicked(e -> {Cancel(stage);});
 		btnStudentCanc.setStyle("-fx-background-color: #FF0000; -fx-text-fill: white;");
 		
 		// adding all created components to the pane
@@ -61,9 +62,18 @@ public class CadStudent extends Application {
 		stage.show();
 		}
 	
-	private void CadStudent(Stage stage) {
+	private void Cancel(Stage stage) {
 		try {
 			new StudentScream().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void Add(Stage stage) {
+		try {
+			new AlunoOK(Strings.message2).start(new Stage());
 			stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
