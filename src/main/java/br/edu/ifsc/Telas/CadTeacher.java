@@ -1,6 +1,7 @@
 package br.edu.ifsc.Telas;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDatePicker;
 
 import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.Mensagem.TeacherOK;
@@ -87,7 +88,7 @@ public class CadTeacher extends Application {
 		txtnomeTeacher.setPrefWidth(150);
 				
 		// creating the Birth textfield
-		txtNascTeacher = new TextField();
+		JFXDatePicker txtNascTeacher = new JFXDatePicker();
 		txtNascTeacher.setLayoutX(300);
 		txtNascTeacher.setLayoutY(60);
 		txtNascTeacher.setMaxWidth(150);
