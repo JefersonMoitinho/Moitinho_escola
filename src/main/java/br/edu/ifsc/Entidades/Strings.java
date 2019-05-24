@@ -47,6 +47,10 @@ public class Strings {
 	// String class CadTeacher
 	public static final String message2 = "Aluno cadastrado com sucesso";
 	public static final String btnOk2 = "Ok";
+	
+	// String class CadTeacher
+	public static final String message3 = "Professor cadastrado com sucesso";
+	public static final String btnOk3 = "Ok";
 }
 
 

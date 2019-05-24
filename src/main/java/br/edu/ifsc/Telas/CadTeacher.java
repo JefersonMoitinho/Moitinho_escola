@@ -32,6 +32,7 @@ public class CadTeacher extends Application {
 		btnTeacherAdd.setMaxWidth(80);
 		btnTeacherAdd.setMinWidth(15);
 		btnTeacherAdd.setPrefWidth(150);
+		btnTeacherAdd.setOnMouseClicked(e -> {Add(stage);});
 		btnTeacherAdd.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
 				
 		// creating the return button
@@ -41,7 +42,7 @@ public class CadTeacher extends Application {
 		btnTeacherCanc.setMaxWidth(80);
 		btnTeacherCanc.setMinWidth(15);
 		btnTeacherCanc.setPrefWidth(150);
-		btnTeacherCanc.setOnMouseClicked(e -> {CadTeacher(stage);});
+		btnTeacherCanc.setOnMouseClicked(e -> {Cancel(stage);});
 		btnTeacherCanc.setStyle("-fx-background-color: #FF0000; -fx-text-fill: white;");
 		
 		// adding all created components to the pane
@@ -61,7 +62,7 @@ public class CadTeacher extends Application {
 		stage.show();
 		}
 	
-	private void CadTeacher(Stage stage) {
+	private void Cancel(Stage stage) {
 		try {
 			new TeacherScream().start(new Stage());
 			stage.close();
@@ -70,5 +71,13 @@ public class CadTeacher extends Application {
 		}
 	}
 	
+	private void Add(Stage stage) {
+		try {
+			new TeacherOK(Strings.message3).start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 }
