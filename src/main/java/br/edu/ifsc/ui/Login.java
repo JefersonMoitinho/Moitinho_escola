@@ -1,20 +1,19 @@
 package br.edu.ifsc.ui;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
+
 import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.Error.Error;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class Login extends Application {
-	private Button btnLogin;
-	private TextField txtUsername;
-	private PasswordField txtPassword;
+	private JFXTextField txtUsername;
 	private Label lblLogin;
 	private Label lblPassword;
 
@@ -32,16 +31,16 @@ public class Login extends Application {
 		stage.setScene(scene);
 
 		// creating the label component
-		lblLogin = new Label(Strings.lblLogin);
+		lblLogin = new Label();
 		lblLogin.setLayoutX(10);
 		lblLogin.setLayoutY(10);
 
-		lblPassword = new Label(Strings.lblPassword);
+		lblPassword = new Label();
 		lblPassword.setLayoutX(10);
 		lblPassword.setLayoutY(70);
 
 		// creating the username textfield
-		txtUsername = new TextField();
+		txtUsername = new JFXTextField();
 		txtUsername.setPromptText("Digite aqui seu login");
 		txtUsername.setLayoutX(10);
 		txtUsername.setLayoutY(31);
@@ -50,7 +49,7 @@ public class Login extends Application {
 		txtUsername.setPrefWidth(150);
 
 		// creating the password textfield
-		txtPassword = new PasswordField();
+		JFXPasswordField txtPassword = new JFXPasswordField();
 		txtPassword.setPromptText("Digite aqui sua senha");
 		txtPassword.setLayoutX(10);
 		txtPassword.setLayoutY(91);
@@ -59,11 +58,13 @@ public class Login extends Application {
 		txtPassword.setPrefWidth(150);
 
 		// creating the login button
-		btnLogin = new Button(Strings.btnLogin);
-		btnLogin.setLayoutX(180);
+		JFXButton btnLogin = new JFXButton(Strings.btnLogin);
+		btnLogin.setLayoutX(200);
 		btnLogin.setLayoutY(30);
+		btnLogin.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
 		btnLogin.setOnMouseClicked(e -> login(stage, txtUsername.getText().trim(), txtPassword.getText().trim())); // setting
 																	         // the button behavior using a lambda expression
+	
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblLogin);
@@ -74,7 +75,7 @@ public class Login extends Application {
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
-				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+				+ "from	0%	0%	to	100%	100%,	white	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);

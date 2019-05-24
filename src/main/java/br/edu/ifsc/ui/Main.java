@@ -1,5 +1,7 @@
 package br.edu.ifsc.ui;
 
+import com.jfoenix.controls.JFXButton;
+
 import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.Screans.StudentScream;
 import br.edu.ifsc.Screans.TeacherScream;
@@ -13,18 +15,14 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 	private String username;
-	private Button btnMenuSair;
 	private Button btnMenuAluno;
 	private Button btnMenuProfessor;
 	private Button btnMenuRotinaClasse;
 	private Button btnMenuBiblioteca;
 	private Button btnMenuDefinicoes;
-
+	
 	public Main(String username) {
 		this.username = username;
-	}
-
-	public Main() {
 	}
 
 	@Override
@@ -41,7 +39,8 @@ public class Main extends Application {
 		lblMain.setLayoutY(10);
 
 		// creating the exit menu button
-		btnMenuSair = new Button(Strings.btnMenuSair);
+		JFXButton btnMenuSair = new JFXButton(Strings.btnMenuSair);
+		btnMenuSair.setStyle("-fx-background-color: #FF0000; -fx-text-fill: white;");
 		btnMenuSair.setLayoutX(360);
 		btnMenuSair.setLayoutY(30);
 		btnMenuSair.setMaxWidth(80);
@@ -102,7 +101,7 @@ public class Main extends Application {
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
-				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+				+ "from	0%	0%	to	100%	100%,	white	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);

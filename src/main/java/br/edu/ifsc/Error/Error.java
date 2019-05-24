@@ -41,7 +41,7 @@ public class Error extends Application {
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
-				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+				+ "from	0%	0%	to	100%	100%,	white	0%,	silver	100%);");
 
 		stage.show();
 	}

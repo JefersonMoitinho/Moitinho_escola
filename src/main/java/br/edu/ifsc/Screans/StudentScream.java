@@ -1,5 +1,7 @@
 package br.edu.ifsc.Screans;
 
+import com.jfoenix.controls.JFXButton;
+
 import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.ui.Main;
 import javafx.application.Application;
@@ -11,8 +13,6 @@ import javafx.stage.Stage;
 
 public class StudentScream extends Application {
 
-	private Button btnMenuVoltar;
-	
 	@Override
 	public void start(Stage stage) throws Exception {
 		// creating the classes hierarchy (pane -> scene -> stage)
@@ -25,23 +25,43 @@ public class StudentScream extends Application {
 		Label lblStudentScream = new Label(Strings.lblStudentScream);
 		lblStudentScream.setLayoutX(10);
 		lblStudentScream.setLayoutY(10);
-		
+
 		// creating the return button
-		btnMenuVoltar = new Button(Strings.btnMenuVoltar);
+		Button btnMenuVoltar = new Button(Strings.btnMenuVoltar);
 		btnMenuVoltar.setLayoutX(360);
 		btnMenuVoltar.setLayoutY(30);
 		btnMenuVoltar.setMaxWidth(80);
 		btnMenuVoltar.setMinWidth(15);
 		btnMenuVoltar.setPrefWidth(150);
-		btnMenuVoltar.setOnMouseClicked(e ->{Menu(stage);});
+		btnMenuVoltar.setOnMouseClicked(e -> {Menu(stage);});
+		
+		// creating the return button
+		Button btnStudentCad = new JFXButton(Strings.btnStudentCad);
+		btnStudentCad.setLayoutX(260);
+		btnStudentCad.setLayoutY(240);
+		btnStudentCad.setMaxWidth(80);
+		btnStudentCad.setMinWidth(15);
+		btnStudentCad.setPrefWidth(150);
+		btnStudentCad.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
+		
+		// creating the return button
+		JFXButton btnStudentDel = new JFXButton(Strings.btnStudentDel);
+		btnStudentDel.setLayoutX(360);
+		btnStudentDel.setLayoutY(240);
+		btnStudentDel.setMaxWidth(80);
+		btnStudentDel.setMinWidth(15);
+		btnStudentDel.setPrefWidth(150);
+		btnStudentDel.setStyle("-fx-background-color: #FF0000; -fx-text-fill: white;");
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblStudentScream);
 		pane.getChildren().add(btnMenuVoltar);
+		pane.getChildren().add(btnStudentCad);
+		pane.getChildren().add(btnStudentDel);
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
-				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
+				+ "from	0%	0%	to	100%	100%,	white	0%,	silver	100%);");
 
 		// setting some stage (window) properties
 		stage.setTitle(Strings.appTitle);
@@ -50,10 +70,10 @@ public class StudentScream extends Application {
 		// showing the created UI
 		stage.show();
 	}
-	
+
 	private void Menu(Stage stage) {
 		try {
-			new Main().start(new Stage());
+			new Main("admin").start(new Stage());
 			stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
