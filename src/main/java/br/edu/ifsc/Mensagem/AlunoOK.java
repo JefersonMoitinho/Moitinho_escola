@@ -1,8 +1,9 @@
-package br.edu.ifsc.Telas;
+package br.edu.ifsc.Mensagem;
 
 import com.jfoenix.controls.JFXButton;
 
 import br.edu.ifsc.Entidades.Strings;
+import br.edu.ifsc.Telas.StudentScream;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
