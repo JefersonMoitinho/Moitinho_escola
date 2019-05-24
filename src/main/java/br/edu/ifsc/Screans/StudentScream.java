@@ -27,13 +27,13 @@ public class StudentScream extends Application {
 		lblStudentScream.setLayoutY(10);
 
 		// creating the return button
-		Button btnMenuVoltar = new Button(Strings.btnMenuVoltar);
-		btnMenuVoltar.setLayoutX(360);
-		btnMenuVoltar.setLayoutY(30);
-		btnMenuVoltar.setMaxWidth(80);
-		btnMenuVoltar.setMinWidth(15);
-		btnMenuVoltar.setPrefWidth(150);
-		btnMenuVoltar.setOnMouseClicked(e -> {Menu(stage);});
+		Button btnStudentVoltar = new Button(Strings.btnStudentVoltar);
+		btnStudentVoltar.setLayoutX(360);
+		btnStudentVoltar.setLayoutY(30);
+		btnStudentVoltar.setMaxWidth(80);
+		btnStudentVoltar.setMinWidth(15);
+		btnStudentVoltar.setPrefWidth(150);
+		btnStudentVoltar.setOnMouseClicked(e -> {Menu(stage);});
 		
 		// creating the return button
 		Button btnStudentCad = new JFXButton(Strings.btnStudentCad);
@@ -55,7 +55,7 @@ public class StudentScream extends Application {
 
 		// adding all created components to the pane
 		pane.getChildren().add(lblStudentScream);
-		pane.getChildren().add(btnMenuVoltar);
+		pane.getChildren().add(btnStudentVoltar);
 		pane.getChildren().add(btnStudentCad);
 		pane.getChildren().add(btnStudentDel);
 

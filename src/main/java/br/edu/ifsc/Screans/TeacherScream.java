@@ -13,8 +13,6 @@ import javafx.stage.Stage;
 
 public class TeacherScream extends Application {
 	
-	private Button btnMenuVoltar;
-	
 	@Override
 	public void start(Stage stage) throws Exception {
 		// creating the classes hierarchy (pane -> scene -> stage)
@@ -29,13 +27,13 @@ public class TeacherScream extends Application {
 		lbTeacherScream.setLayoutY(10);
 		
 		// creating the return button
-		btnMenuVoltar = new Button(Strings.btnMenuVoltar);
-		btnMenuVoltar.setLayoutX(360);
-		btnMenuVoltar.setLayoutY(30);
-		btnMenuVoltar.setMaxWidth(80);
-		btnMenuVoltar.setMinWidth(15);
-		btnMenuVoltar.setPrefWidth(150);
-		btnMenuVoltar.setOnMouseClicked(e ->{Menu(stage);});
+		Button btnTeacherVoltar = new Button(Strings.btnTeacherVoltar);
+		btnTeacherVoltar.setLayoutX(360);
+		btnTeacherVoltar.setLayoutY(30);
+		btnTeacherVoltar.setMaxWidth(80);
+		btnTeacherVoltar.setMinWidth(15);
+		btnTeacherVoltar.setPrefWidth(150);
+		btnTeacherVoltar.setOnMouseClicked(e ->{Menu(stage);});
 		
 		// creating the return button
 		Button btnTeacherCad = new JFXButton(Strings.btnTeachertCad);
@@ -57,7 +55,7 @@ public class TeacherScream extends Application {
 		
 		// adding all created components to the pane
 		pane.getChildren().add(lbTeacherScream);
-		pane.getChildren().add(btnMenuVoltar);
+		pane.getChildren().add(btnTeacherVoltar);
 		pane.getChildren().add(btnTeacherCad);
 		pane.getChildren().add(btnTeacherDel);
 
