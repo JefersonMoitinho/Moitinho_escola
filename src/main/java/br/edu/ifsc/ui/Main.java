@@ -1,5 +1,7 @@
 package br.edu.ifsc.ui;
 
+import br.edu.ifsc.Screans.StudentScream;
+import br.edu.ifsc.Strings.Strings;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -51,6 +53,7 @@ public class Main extends Application {
 		btnMenuAluno.setMaxWidth(150);
 		btnMenuAluno.setMinWidth(190);
 		btnMenuAluno.setPrefWidth(150);
+		btnMenuAluno.setOnMouseClicked(e ->{telaStudent(stage);});
 
 		// creating the teacher menu button
 		btnMenuProfessor = new Button(Strings.btnMenuProfessor);
@@ -111,5 +114,13 @@ public class Main extends Application {
 	private void close(Stage stage) {
 		stage.close();
 	}
-
+	private void telaStudent(Stage stage) {
+		try {
+			new StudentScream().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

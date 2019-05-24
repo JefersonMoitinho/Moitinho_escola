@@ -1,5 +1,7 @@
 package br.edu.ifsc.ui;
 
+import br.edu.ifsc.Error.Error;
+import br.edu.ifsc.Strings.Strings;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

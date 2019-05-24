@@ -1,5 +1,5 @@
 
-package br.edu.ifsc.ui;
+package br.edu.ifsc.Strings;
 
 public class Strings {
 	
@@ -17,5 +17,6 @@ public class Strings {
 	public static final String btnMenuRotinaClasse = "Rotina Classe";
 	public static final String btnMenuBiblioteca = "Biblioteca";
 	public static final String btnMenuDefinicoes = "Definições";
-	public static final String lblMenuAluno = "Menu";
+	public static final String lblStudentScream = "Menu Aluno";
+	public static final String lblTeacherScream = "Menu Professor";
 }
