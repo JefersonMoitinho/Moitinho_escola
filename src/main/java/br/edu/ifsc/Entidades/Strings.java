@@ -38,16 +38,21 @@ public class Strings {
 	public static final String lblCadStudent = "Cadastrar  Aluno";
 	public static final String btnStudentAdd = "Adicionar";
 	public static final String btnStudentCanc = "Cancelar";
-	public static final String lblNome = "Digite o nome:";
-	public static final String lblNasc = "Digite a data nascimento:";
-	public static final String lblRg = "Digite o Rg:";
-	public static final String lblCpf = "Digite o Cpf:";
-	public static final String lblSexo = "Ecolha o sexo:";
+	public static final String lblNomeStudent = "Nome:";
+	public static final String lblNascStudent = "Data ";
+	public static final String lblRgStudent = "Rg:";
+	public static final String lblCpfStudent = "Cpf:";
+	public static final String lblSexoStudent = "Sexo:";
 	
 	// String class CadTeacher
 	public static final String lblCadTeacher = "Cadastrar  Professor";
 	public static final String btnTeacherAdd = "Adicionar";
 	public static final String btnTeacherCanc = "Cancelar";
+	public static final String lblNomeTeacher = "Nome:";
+	public static final String lblNascTeacher = "Data Nascimento:";
+	public static final String lblRgTeacher = "Rg:";
+	public static final String lblCpfTeacher = "Cpf:";
+	public static final String lblSexoTeacher = "Sexo:";
 	
 	// String class AlunoOK
 	public static final String message2 = "Aluno cadastrado com sucesso";

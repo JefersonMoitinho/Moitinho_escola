@@ -15,10 +15,10 @@ import javafx.stage.Stage;
 
 public class CadStudent extends Application {
 	
-	private TextField txtnome;
-	private TextField txtNasc;
-	private TextField txtRg;
-	private TextField txtCpf;
+	private TextField txtnomeStudent;
+	private TextField txtNascStudent;
+	private TextField txtRgStudent;
+	private TextField txtCpfStudent;
 
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -34,29 +34,29 @@ public class CadStudent extends Application {
 		lblCadStudent.setLayoutY(10);
 		
 		// creating the label component
-		Label lblNome = new Label(Strings.lblNome);
-		lblNome.setLayoutX(10);
-		lblNome.setLayoutY(40);
+		Label lblNomeStudent = new Label(Strings.lblNomeStudent);
+		lblNomeStudent.setLayoutX(10);
+		lblNomeStudent.setLayoutY(40);
 		
 		// creating the label component
-		Label lblNasc = new Label(Strings.lblNasc);
-		lblNasc.setLayoutX(300);
-		lblNasc.setLayoutY(40);
+		Label lblNascStudent = new Label(Strings.lblNascStudent);
+		lblNascStudent.setLayoutX(300);
+		lblNascStudent.setLayoutY(40);
 		
 		// creating the label component
-		Label lblRg = new Label(Strings.lblRg);
-		lblRg.setLayoutX(10);
-		lblRg.setLayoutY(100);
+		Label lblRgStudent = new Label(Strings.lblRgStudent);
+		lblRgStudent.setLayoutX(10);
+		lblRgStudent.setLayoutY(100);
 		
 		// creating the label component
-		Label lblCpf = new Label(Strings.lblCpf);
-		lblCpf.setLayoutX(300);
-		lblCpf.setLayoutY(100);
+		Label lblCpfStudent = new Label(Strings.lblCpfStudent);
+		lblCpfStudent.setLayoutX(300);
+		lblCpfStudent.setLayoutY(100);
 		
 		// creating the label component
-		Label lblSexo = new Label(Strings.lblSexo);
-		lblSexo.setLayoutX(10);
-		lblSexo.setLayoutY(160);
+		Label lblSexoStudent = new Label(Strings.lblSexoStudent);
+		lblSexoStudent.setLayoutX(10);
+		lblSexoStudent.setLayoutY(160);
 		
 		// creating the return button
 		Button btnStudentAdd = new JFXButton(Strings.btnStudentAdd);
@@ -79,36 +79,36 @@ public class CadStudent extends Application {
 		btnStudentCanc.setStyle("-fx-background-color: #FF0000; -fx-text-fill: white;");
 		
 		// creating the name textfield
-		txtnome = new TextField();
-		txtnome.setLayoutX(10); 
-		txtnome.setLayoutY(60);
-		txtnome.setMaxWidth(150);
-		txtnome.setMinWidth(250);
-		txtnome.setPrefWidth(150);
+		txtnomeStudent = new TextField();
+		txtnomeStudent.setLayoutX(10); 
+		txtnomeStudent.setLayoutY(60);
+		txtnomeStudent.setMaxWidth(150);
+		txtnomeStudent.setMinWidth(250);
+		txtnomeStudent.setPrefWidth(150);
 		
 		// creating the Birth textfield
-		txtNasc = new TextField();
-		txtNasc.setLayoutX(300);
-		txtNasc.setLayoutY(60);
-		txtNasc.setMaxWidth(150);
-		txtNasc.setMinWidth(150);
-		txtNasc.setPrefWidth(150);
+		txtNascStudent = new TextField();
+		txtNascStudent.setLayoutX(300);
+		txtNascStudent.setLayoutY(60);
+		txtNascStudent.setMaxWidth(150);
+		txtNascStudent.setMinWidth(150);
+		txtNascStudent.setPrefWidth(150);
 		
 		// creating the Rg textfield
-		txtRg = new TextField();
-		txtRg.setLayoutX(10);
-		txtRg.setLayoutY(120);
-		txtRg.setMaxWidth(150);
-		txtRg.setMinWidth(150);
-		txtRg.setPrefWidth(150);
+		txtRgStudent = new TextField();
+		txtRgStudent.setLayoutX(10);
+		txtRgStudent.setLayoutY(120);
+		txtRgStudent.setMaxWidth(150);
+		txtRgStudent.setMinWidth(150);
+		txtRgStudent.setPrefWidth(150);
 				
 		// creating the CPF textfield
-		txtCpf = new TextField();
-		txtCpf.setLayoutX(300);
-		txtCpf.setLayoutY(120);
-		txtCpf.setMaxWidth(150);
-		txtCpf.setMinWidth(150);
-		txtCpf.setPrefWidth(150);
+		txtCpfStudent = new TextField();
+		txtCpfStudent.setLayoutX(300);
+		txtCpfStudent.setLayoutY(120);
+		txtCpfStudent.setMaxWidth(150);
+		txtCpfStudent.setMinWidth(150);
+		txtCpfStudent.setPrefWidth(150);
 		
 		CheckBox cb1 = new CheckBox ("Segundo");
 		cb1.setText ("M");
@@ -124,17 +124,17 @@ public class CadStudent extends Application {
 		
 		// adding all created components to the pane
 		pane.getChildren().add(lblCadStudent);
-		pane.getChildren().add(lblNome);
-		pane.getChildren().add(lblNasc);
-		pane.getChildren().add(lblRg);
-		pane.getChildren().add(lblCpf);
-		pane.getChildren().add(lblSexo);
+		pane.getChildren().add(lblNomeStudent);
+		pane.getChildren().add(lblNascStudent);
+		pane.getChildren().add(lblRgStudent);
+		pane.getChildren().add(lblCpfStudent);
+		pane.getChildren().add(lblSexoStudent);
 		pane.getChildren().add(btnStudentAdd);
 		pane.getChildren().add(btnStudentCanc);
-		pane.getChildren().add(txtnome);
-		pane.getChildren().add(txtNasc);
-		pane.getChildren().add(txtRg);
-		pane.getChildren().add(txtCpf);
+		pane.getChildren().add(txtnomeStudent);
+		pane.getChildren().add(txtNascStudent);
+		pane.getChildren().add(txtRgStudent);
+		pane.getChildren().add(txtCpfStudent);
 		pane.getChildren().add(cb1);
 		pane.getChildren().add(cb2);
 
