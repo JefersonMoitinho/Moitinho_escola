@@ -25,12 +25,22 @@ public class Strings {
 	// String class StudentScream
 	public static final String lblStudentScream = "Menu Aluno";
 	public static final String btnStudentVoltar = "Voltar";
-	public static final String btnStudentCad = "Cadastrar";
+	public static final String btnStudentCad = "Novo";
 	public static final String btnStudentDel = "Excluir";
 	
 	// String class TeaherScream
 	public static final String lblTeacherScream = "Menu Professor";
 	public static final String btnTeacherVoltar = "Voltar";
-	public static final String btnTeachertCad = "Cadastrar";
+	public static final String btnTeachertCad = "Novo";
 	public static final String btnTeacherDel = "Excluir";
+	
+	// String class CadStudent
+	public static final String lblCadStudent = "Cadastrar  Aluno";
+	public static final String btnStudentAdd = "Adicionar";
+	public static final String btnStudentCanc = "Cancelar";
+	
+	// String class CadTeacher
+	public static final String lblCadTeacher = "Cadastrar  Professor";
+	public static final String btnTeacherAdd = "Adicionar";
+	public static final String btnTeacherCanc = "Cancelar";
 }

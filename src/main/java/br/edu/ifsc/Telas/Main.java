@@ -1,10 +1,8 @@
-package br.edu.ifsc.ui;
+package br.edu.ifsc.Telas;
 
 import com.jfoenix.controls.JFXButton;
 
 import br.edu.ifsc.Entidades.Strings;
-import br.edu.ifsc.Screans.StudentScream;
-import br.edu.ifsc.Screans.TeacherScream;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

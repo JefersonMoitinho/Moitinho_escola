@@ -1,4 +1,4 @@
-package br.edu.ifsc.Error;
+package br.edu.ifsc.Mensagem;
 
 import br.edu.ifsc.Entidades.Strings;
 import javafx.application.Application;

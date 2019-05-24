@@ -1,9 +1,8 @@
-package br.edu.ifsc.Screans;
+package br.edu.ifsc.Telas;
 
 import com.jfoenix.controls.JFXButton;
 
 import br.edu.ifsc.Entidades.Strings;
-import br.edu.ifsc.ui.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -42,6 +41,7 @@ public class TeacherScream extends Application {
 		btnTeacherCad.setMaxWidth(80);
 		btnTeacherCad.setMinWidth(15);
 		btnTeacherCad.setPrefWidth(150);
+		btnTeacherCad.setOnMouseClicked(e ->{Cad(stage);});
 		btnTeacherCad.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
 				
 		// creating the return button
@@ -74,6 +74,15 @@ public class TeacherScream extends Application {
 	private void Menu(Stage stage) {
 		try {
 			new Main("admin").start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void Cad(Stage stage) {
+		try {
+			new CadTeacher().start(new Stage());
 			stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();

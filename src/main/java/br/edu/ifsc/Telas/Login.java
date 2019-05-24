@@ -1,11 +1,11 @@
-package br.edu.ifsc.ui;
+package br.edu.ifsc.Telas;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import br.edu.ifsc.Entidades.Strings;
-import br.edu.ifsc.Error.Error;
+import br.edu.ifsc.Mensagem.Error;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
