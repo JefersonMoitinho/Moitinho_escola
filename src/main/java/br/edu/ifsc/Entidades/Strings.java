@@ -1,5 +1,5 @@
 
-package br.edu.ifsc.Strings;
+package br.edu.ifsc.Entidades;
 
 public class Strings {
 	
@@ -19,4 +19,5 @@ public class Strings {
 	public static final String btnMenuDefinicoes = "Definições";
 	public static final String lblStudentScream = "Menu Aluno";
 	public static final String lblTeacherScream = "Menu Professor";
+	public static final String btnMenuVoltar = "Voltar";
 }

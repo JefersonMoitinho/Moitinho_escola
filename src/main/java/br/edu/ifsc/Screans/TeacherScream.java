@@ -1,53 +1,41 @@
-package br.edu.ifsc.Error;
+package br.edu.ifsc.Screans;
 
 import br.edu.ifsc.Entidades.Strings;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Error extends Application {
-
-	private String message;
-
-	public Error(String message) {
-		this.message = message;
-	}
-
+public class TeacherScream extends Application {
+	
+	
 	@Override
 	public void start(Stage stage) throws Exception {
 		// creating the classes hierarchy (pane -> scene -> stage)
 		AnchorPane pane = new AnchorPane();
-		pane.setPrefSize(280, 120);
+		pane.setPrefSize(480, 300);
 		Scene scene = new Scene(pane);
 		stage.setScene(scene);
 
 		// creating the label component
-		Label lblMessage = new Label(message);
-		lblMessage.setLayoutX(10);
-		lblMessage.setLayoutY(10);
-
-		// creating the Ok button
-		Button btnOk = new Button(Strings.btnOk);
-		btnOk.setLayoutX(167);
-		btnOk.setLayoutY(10);
-		btnOk.setOnMouseClicked(e -> close(stage));
-
+		Label lbTeacherScream = new Label(Strings.lblTeacherScream);
+		lbTeacherScream.setLayoutX(10);
+		lbTeacherScream.setLayoutY(10);
+		
 		// adding all created components to the pane
-		pane.getChildren().add(lblMessage);
-		pane.getChildren().add(btnOk);
+		pane.getChildren().add(lbTeacherScream);
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
 				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
 
+		// setting some stage (window) properties
+		stage.setTitle(Strings.appTitle);
+		stage.setResizable(false);
+
+		// showing the created UI
 		stage.show();
-	}
-
-	private void close(Stage stage) {
-		stage.close();
-	}
-
+		}
+	
 }

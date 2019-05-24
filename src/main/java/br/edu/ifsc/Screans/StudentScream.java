@@ -1,17 +1,17 @@
 package br.edu.ifsc.Screans;
 
-import br.edu.ifsc.Strings.Strings;
+import br.edu.ifsc.Entidades.Strings;
+import br.edu.ifsc.ui.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro8.JMetro;
 
+public class StudentScream extends Application {
 
-
-public class StudentScream extends Application{
-
+	private Button btnMenuVoltar;
 	
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -26,11 +26,18 @@ public class StudentScream extends Application{
 		lblStudentScream.setLayoutX(10);
 		lblStudentScream.setLayoutY(10);
 		
+		// creating the return button
+		btnMenuVoltar = new Button(Strings.btnMenuVoltar);
+		btnMenuVoltar.setLayoutX(360);
+		btnMenuVoltar.setLayoutY(30);
+		btnMenuVoltar.setMaxWidth(80);
+		btnMenuVoltar.setMinWidth(15);
+		btnMenuVoltar.setPrefWidth(150);
+		btnMenuVoltar.setOnMouseClicked(e ->{Menu(stage);});
+
 		// adding all created components to the pane
 		pane.getChildren().add(lblStudentScream);
-
-		// applying the LIGHT style from the JMetro library to the pane
-		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
+		pane.getChildren().add(btnMenuVoltar);
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
@@ -44,4 +51,13 @@ public class StudentScream extends Application{
 		stage.show();
 	}
 	
+	private void Menu(Stage stage) {
+		try {
+			new Main().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 }

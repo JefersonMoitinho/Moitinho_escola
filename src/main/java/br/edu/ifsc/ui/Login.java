@@ -1,7 +1,7 @@
 package br.edu.ifsc.ui;
 
+import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.Error.Error;
-import br.edu.ifsc.Strings.Strings;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,7 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro8.JMetro;
 
 public class Login extends Application {
 	private Button btnLogin;
@@ -72,9 +71,6 @@ public class Login extends Application {
 		pane.getChildren().add(btnLogin);
 		pane.getChildren().add(txtUsername);
 		pane.getChildren().add(txtPassword);
-
-		// applying the LIGHT style from the JMetro library to the pane
-		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
 
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"

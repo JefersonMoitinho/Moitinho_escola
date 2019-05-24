@@ -1,14 +1,14 @@
 package br.edu.ifsc.ui;
 
+import br.edu.ifsc.Entidades.Strings;
 import br.edu.ifsc.Screans.StudentScream;
-import br.edu.ifsc.Strings.Strings;
+import br.edu.ifsc.Screans.TeacherScream;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro8.JMetro;
 
 public class Main extends Application {
 
@@ -22,6 +22,9 @@ public class Main extends Application {
 
 	public Main(String username) {
 		this.username = username;
+	}
+
+	public Main() {
 	}
 
 	@Override
@@ -62,6 +65,7 @@ public class Main extends Application {
 		btnMenuProfessor.setMaxWidth(150);
 		btnMenuProfessor.setMinWidth(190);
 		btnMenuProfessor.setPrefWidth(150);
+		btnMenuProfessor.setOnMouseClicked(e ->{telaTeacher(stage);});
 
 		// creating the menu button class routine
 		btnMenuRotinaClasse = new Button(Strings.btnMenuRotinaClasse);
@@ -96,9 +100,6 @@ public class Main extends Application {
 		pane.getChildren().add(btnMenuDefinicoes);
 		pane.getChildren().add(btnMenuSair);
 
-		// applying the LIGHT style from the JMetro library to the pane
-		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
-
 		// melhorando aparencia do painel principal
 		pane.setStyle("-fx-background-color:	linear-gradient(\n"
 				+ "from	0%	0%	to	100%	100%,	grey	0%,	silver	100%);");
@@ -114,12 +115,21 @@ public class Main extends Application {
 	private void close(Stage stage) {
 		stage.close();
 	}
+	
 	private void telaStudent(Stage stage) {
 		try {
 			new StudentScream().start(new Stage());
 			stage.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private void telaTeacher(Stage stage) {
+		try {
+			new TeacherScream().start(new Stage());
+			stage.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
